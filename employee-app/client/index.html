@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Register Employee</title>
+        <script src="lib/jquery/dist/jquery.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-resource/angular-resource.js"></script>
+        <script src="js/lb-services.js"></script>
+        <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div ng-app="employees" class = "container" style="width:550px">
+            <div style="text-align:center;color:blue">
+                <h3><b>Employee Registration Form</b></h3>
+            </div>
+            <div ng-controller="empController" >
+                <form role = "form" class="well" >
+                  <div class = "form-group">
+                     <label for = "name"> First Name:  </label>
+                     <input type = "text" id = "fname" class = "form-control" placeholder = "Enter First Name " ng-model = "fname">
+                  </div>
+                  <div class = "form-group">
+                     <label for = "name"> Last Name:  </label>
+                     <input type = "text" id = "lname" class = "form-control" placeholder = "Enter Last Name " ng-model = "lname">
+                  </div>
+                  <div class = "form-group">
+                     <label for = "email"> Email:  </label>
+                     <input type = "email" id = "email" class = "form-control" placeholder = "Enter Email " ng-model = "email">
+                  </div>
+                  <div class = "form-group">
+                     <label for = "phone"> Ph.Number:  </label>
+                     <input type = "number" id = "phone" class = "form-control" placeholder = "Enter Phone Number " ng-model = "phone">
+                  </div>
+                  <div class = "form-group">
+                     <label for = "address"> Address:  </label>
+                     <input type = "text" id = "addr" class = "form-control" placeholder = "Enter Address " ng-model = "addr">
+                  </div>
+                  <br>
+                     <input type="button" class="btn btn-primary" ng-click="registerEmp()" class="btn btn-primary" value = "Submit">
+                </form>
+                <div style="text-align:center;color:rgba(0, 128, 0, 0.692)" ng-show="isreg">
+                    <h4><b>Employee Registered Successfully..!!</b></h4>
+                </div>
+              </div>
+        </div>
+    </body>
+</html>
